@@ -5,7 +5,7 @@ app:
   time_format: '2006-01-02T15:04:05'
 
 producer:
-  brokers: ['192.168.0.12:9092']
+  brokers: ['192.168.0.64:9092']
   topic: 'store.report.report'
   batch_size: 1
   batch_timeout: 10
