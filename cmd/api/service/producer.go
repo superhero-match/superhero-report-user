@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2019 - 2021 MWSOFT
+  Copyright (C) 2019 - 2022 MWSOFT
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
   the Free Software Foundation, either version 3 of the License, or
@@ -14,14 +14,15 @@
 package service
 
 import (
+	"time"
+
 	"github.com/superhero-match/superhero-report-user/cmd/api/model"
 	"github.com/superhero-match/superhero-report-user/cmd/api/service/mapper"
-	"time"
 )
 
 // StoreReport publishes reported user on Kafka topic for it to be
 // consumed by consumer and stored in DB.
-func (s *Service) StoreReport(report model.Report) error {
+func (s *service) StoreReport(report model.Report) error {
 	return s.Producer.StoreReport(
 		mapper.MapAPIReportToProducer(
 			report,

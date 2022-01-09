@@ -1,10 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="ALL" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="95f8d40b-9664-4a10-af36-beee1634439f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/superhero-report-user.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/superhero-report-user.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/api/controller/controller.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/api/controller/controller.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/api/controller/report_user.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/api/controller/report_user.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/api/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/api/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/api/model/report.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/api/model/report.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/api/service/mapper/producer.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/api/service/mapper/producer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/api/service/producer.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/api/service/producer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/api/service/service.go" beforeDir="false" afterPath="$PROJECT_DIR$/cmd/api/service/service.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/health/controller/controller.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/health/controller/health.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/health/controller/shutdown.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmd/health/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/config/app.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/config/app.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/config/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/config/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/config/health.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/config/producer.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/config/producer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/health/client.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/health/shutdown.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/producer/close.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/producer/close.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/producer/model/report.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/producer/model/report.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/producer/producer.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/producer/producer.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/internal/producer/store.go" beforeDir="false" afterPath="$PROJECT_DIR$/internal/producer/store.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +45,19 @@
       </list>
     </option>
   </component>
-  <component name="GOROOT" path="/usr/local/go" />
+  <component name="GOROOT" url="file:///usr/local/go" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="urls">
+      <list>
+        <option value="file://$PROJECT_DIR$/../../../.." />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="1i85D3JqpXYgfiYMowOm3rb65mR" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -33,9 +70,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="configurable..is.expanded" value="false" />
+    <property name="configurable.GoLibrariesConfigurable.is.expanded" value="true" />
+    <property name="go.format.on.save.advertiser.fired" value="true" />
+    <property name="go.formatter.settings.were.checked" value="true" />
     <property name="go.import.settings.migrated" value="true" />
+    <property name="go.modules.go.list.on.any.changes.was.set" value="true" />
     <property name="go.sdk.automatically.set" value="true" />
     <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="go.watchers.conflict.with.on.save.actions.check.performed" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -45,30 +88,31 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
   </component>
-  <component name="RunManager" selected="Go Build.go build github.com/superhero-match/superhero-report-user/cmd/health">
+  <component name="RunManager" selected="Go Build.go build github.com/superhero-match/superhero-report-user/cmd/api">
     <configuration name="go build github.com/superhero-match/superhero-report-user/cmd/api" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="superhero-report-user" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/cmd/api/main.go" />
       <package value="github.com/superhero-match/superhero-report-user/cmd/api" />
       <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/cmd/api/main.go" />
       <method v="2" />
     </configuration>
     <configuration name="go build github.com/superhero-match/superhero-report-user/cmd/health" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="superhero-report-user" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/cmd/health/main.go" />
       <package value="github.com/superhero-match/superhero-report-user/cmd/health" />
       <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/cmd/health/main.go" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build github.com/superhero-match/superhero-report-user/cmd/health" />
         <item itemvalue="Go Build.go build github.com/superhero-match/superhero-report-user/cmd/api" />
+        <item itemvalue="Go Build.go build github.com/superhero-match/superhero-report-user/cmd/health" />
       </list>
     </recent_temporary>
   </component>
@@ -76,35 +120,15 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="514" y="330" width="410" height="141" key="#GOROOT" timestamp="1606133489004">
-      <screen x="72" y="27" width="1294" height="741" />
-    </state>
-    <state x="514" y="330" width="410" height="141" key="#GOROOT/72.27.1294.741@72.27.1294.741" timestamp="1606133489004" />
-    <state x="475" y="197" key="#Go_Modules" timestamp="1601277128301">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="475" y="197" key="#Go_Modules/0.0.1366.728@0.0.1366.728" timestamp="1601277128301" />
-    <state x="511" y="147" width="424" height="491" key="FileChooserDialogImpl" timestamp="1606130047691">
-      <screen x="72" y="27" width="1294" height="741" />
-    </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1602486531777" />
-    <state x="511" y="147" width="424" height="491" key="FileChooserDialogImpl/72.27.1294.741@72.27.1294.741" timestamp="1606130047691" />
-    <state width="1323" height="284" key="GridCell.Tab.0.bottom" timestamp="1601898732037">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="284" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1601898732037" />
-    <state width="1323" height="284" key="GridCell.Tab.0.center" timestamp="1601898732037">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="284" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1601898732037" />
-    <state width="1323" height="284" key="GridCell.Tab.0.left" timestamp="1601898732036">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="284" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1601898732036" />
-    <state width="1323" height="284" key="GridCell.Tab.0.right" timestamp="1601898732037">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="284" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1601898732037" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

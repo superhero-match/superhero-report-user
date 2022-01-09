@@ -1,5 +1,5 @@
 /*
-  Copyright (C) 2019 - 2021 MWSOFT
+  Copyright (C) 2019 - 2022 MWSOFT
   This program is free software: you can redistribute it and/or modify
   it under the terms of the GNU General Public License as published by
   the Free Software Foundation, either version 3 of the License, or
@@ -18,20 +18,21 @@ import (
 	"time"
 
 	"github.com/gin-gonic/gin"
-	ctrl "github.com/superhero-match/superhero-report-user/cmd/api/model"
 	"go.uber.org/zap"
+
+	ctrl "github.com/superhero-match/superhero-report-user/cmd/api/model"
 )
 
-// Match publishes new match on Kafka for it to be save to DB.
+// ReportUser publishes new reported user on Kafka for it to be saved to DB.
 func (ctl *Controller) ReportUser(c *gin.Context) {
 	var req ctrl.Report
 
 	err := c.BindJSON(&req)
 	if checkError(err, c) {
-		ctl.Service.Logger.Error(
+		ctl.Logger.Error(
 			"failed to bind JSON to value of type Report",
 			zap.String("err", err.Error()),
-			zap.String("time", time.Now().UTC().Format(ctl.Service.TimeFormat)),
+			zap.String("time", time.Now().UTC().Format(ctl.TimeFormat)),
 		)
 
 		return
@@ -39,10 +40,10 @@ func (ctl *Controller) ReportUser(c *gin.Context) {
 
 	err = ctl.Service.StoreReport(req)
 	if checkError(err, c) {
-		ctl.Service.Logger.Error(
+		ctl.Logger.Error(
 			"failed while executing service.StoreReport()",
 			zap.String("err", err.Error()),
-			zap.String("time", time.Now().UTC().Format(ctl.Service.TimeFormat)),
+			zap.String("time", time.Now().UTC().Format(ctl.TimeFormat)),
 		)
 
 		return
