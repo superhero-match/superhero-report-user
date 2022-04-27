@@ -1,5 +1,6 @@
 prepare:
 	go mod download
+	go mod tidy
 
 run:
 	go build -o bin/main cmd/api/main.go
@@ -9,19 +10,20 @@ build:
 	CGO_ENABLED=0 GOOS=linux go build -a -installsuffix cgo -ldflags '-extldflags "-static"' -o bin/main cmd/api/main.go
 	chmod +x bin/main
 
+tests:
+	go test ./... -v -coverpkg=./... -coverprofile=profile.cov ./...
+	go tool cover -func profile.cov
+
 dkb:
 	docker build -t superhero-report-user .
 
 dkr:
-	docker run -p "9000:9000" -p "8270:8270" superhero-report-user
+	docker run -p "9000:9000" superhero-report-user
 
 launch: dkb dkr
 
 api-log:
 	docker logs superhero-report-user -f
-
-es-log:
-	docker logs es -f
 
 rmc:
 	docker rm -f $$(docker ps -a -q)
@@ -34,7 +36,4 @@ clear: rmc rmi
 api-ssh:
 	docker exec -it superhero-report-user /bin/bash
 
-es-ssh:
-	docker exec -it es /bin/bash
-
-PHONY: prepare build dkb dkr launch api-log es-log api-ssh es-ssh rmc rmi clear
+PHONY: prepare build tests dkb dkr launch api-log api-ssh rmc rmi clear

@@ -11,6 +11,7 @@
   You should have received a copy of the GNU General Public License
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+
 package producer
 
 import (
@@ -26,14 +27,24 @@ import (
 // StoreReport publishes reported user on Kafka topic for it to be
 // consumed by consumer and stored in DB.
 func (p *producer) StoreReport(report model.Report) error {
-	var sb bytes.Buffer
+	return p.storeReport(p.Producer, report)
+}
 
-	err := json.NewEncoder(&sb).Encode(report)
+// publishStoreReport publishes reported user on Kafka topic.
+func publishStoreReport(producer *kafka.Writer, report model.Report) error {
+	err := report.Validate()
 	if err != nil {
 		return err
 	}
 
-	err = p.Producer.WriteMessages(
+	var sb bytes.Buffer
+
+	err = json.NewEncoder(&sb).Encode(report)
+	if err != nil {
+		return err
+	}
+
+	err = producer.WriteMessages(
 		context.Background(),
 		kafka.Message{
 			Value: sb.Bytes(),

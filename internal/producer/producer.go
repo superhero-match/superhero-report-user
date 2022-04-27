@@ -11,6 +11,7 @@
   You should have received a copy of the GNU General Public License
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+
 package producer
 
 import (
@@ -30,7 +31,8 @@ type Producer interface {
 
 // producer holds Kafka producer related data.
 type producer struct {
-	Producer *kafka.Writer
+	Producer    *kafka.Writer
+	storeReport func(producer *kafka.Writer, report model.Report) error
 }
 
 // NewProducer configures Kafka producer that produces to configured topic.
@@ -44,6 +46,7 @@ func NewProducer(cfg *config.Config) Producer {
 	}
 
 	return &producer{
-		Producer: w,
+		Producer:    w,
+		storeReport: publishStoreReport,
 	}
 }

@@ -11,11 +11,12 @@
   You should have received a copy of the GNU General Public License
   along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
+
 package config
 
 // Producer holds the configuration values for the Kafka producer.
 type Producer struct {
-	Brokers      string `env:"KAFKA_BROKERS" yaml:"brokers" default:"192.168.1.229:9092"`
+	Brokers      string `env:"KAFKA_BROKERS" yaml:"brokers" default:"localhost:9092"`
 	Topic        string `env:"KAFKA_STORE_REPORT_TOPIC" yaml:"topic" default:"store.report.report"`
 	BatchSize    int    `env:"KAFKA_BATCH_SIZE" yaml:"batch_size" default:"1"`
 	BatchTimeout int    `env:"KAFKA_BATCH_TIMEOUT" yaml:"batch_timeout" default:"10"`
